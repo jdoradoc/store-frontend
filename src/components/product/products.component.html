@@ -1,0 +1,30 @@
+<div>
+
+  <h2 class="title"> {{ title }} </h2>
+
+  <div id="search-component">
+      <div>
+          <label>Category: </label>
+          <input #searchBox id="searchBox" (keyup)="search(searchBox.value)" />
+      </div>
+  </div>
+
+  <div>
+      <div class="list-products">
+        <ul class="products">
+          <li *ngFor="let product of products" (click)="detailProduct(product)" [class.selected]="product === selectedProduct" title="{{product.name}}">
+            <span>{{ product.name }}</span>
+            <span>({{ product.category }})</span>
+            <span>[{{ product.amount }} units]</span>
+            <button class="delete" (click)="deleteProduct(product); $event.stopPropagation()" title="Delete a Product">x</button>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+          <button (click)="addProduct()" title="Add a Product">Add a Product</button>
+      </div>
+
+  </div>    
+
+</div>

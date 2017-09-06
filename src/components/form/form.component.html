@@ -1,0 +1,44 @@
+<h3>{{ title }}</h3>
+
+<div>
+  <form [formGroup]="myform" (ngSubmit)="save()">
+
+    <div>
+      <div>
+        <label for="name" data-error="Name is required">
+          Name:
+        </label>
+        <input id="name" type="text" [(ngModel)]="product.name" formControlName="name" />
+      </div>
+    </div>
+
+    <div>
+        <div>
+          <label for="amount" data-error="Amount is required">
+            Amount:
+          </label>
+          <input id="amount" type="number" [(ngModel)]="product.amount" formControlName="amount" />
+        </div>
+      </div>
+    
+
+      <div>
+          <div>
+            <label for="category" data-error="Category is required">
+              Category:
+            </label>
+            <input id="category" type="text" [(ngModel)]="product.category" formControlName="category" />
+            
+          </div>
+        </div>
+
+    <button type="submit" title="Save">
+        Submit
+    </button>
+    <button (click)="back()" title="Return to Home">
+        Back
+    </button>
+
+  </form>
+
+</div>

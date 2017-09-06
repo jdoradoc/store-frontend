@@ -1,0 +1,99 @@
+h2 {
+    font-size: 2rem
+}
+
+h2 .title {
+    font-weight: bold
+}
+
+ .list-products {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.products {
+   list-style-type: none;
+   padding: 0;
+   width: 30em;
+   display: inline-block;
+}
+
+.products li {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border: 1px solid #ADC200;
+    background-color: #f7ffb3;
+    margin: 0.5em;
+    padding: 0.8em 0 0.5em 0;
+    height: 1.6em;
+    border-radius: 4px;
+}
+
+.products li span {
+    margin-top: 0;
+}    
+
+.products li:hover {
+    border: none;
+    color: #fff;
+    background-color: #ADC200;
+    font-weight: bold;
+}
+
+.products li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: #C43C3C;
+}
+
+.selected {
+    background-color: #BBD8DC !important;
+    color: #C43C3C;
+}
+
+
+.products .text {
+    position: relative;
+    top: -3px;
+  }
+
+.products .products {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #eee;
+    border: 1px solid lightgrey;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+button.delete {
+    float: right;
+    margin-top: -0.4em;
+    margin-right: 0.8em;
+    background-color: #ADC200;
+    color:white;
+ }
+
+ button.delete:hover {
+    background-color: #f7ffb3;
+    color:#ADC200;
+ }
